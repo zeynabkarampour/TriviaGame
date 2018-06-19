@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(../images/celebration1.jpg);
+    height: 700px;
+}
+
+#Rect1 {
+    height: 400px;
+    background-color: yellow;
+    margin-top: 100px;
+    margin-left: 200px;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+#hTag1 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#startbutton {
+    background-color: thistle;
+    font-size: 30px;
+    padding: 14px 40px;
+    margin-left: 220px;
+    margin-top: 50px;
+}
+
+/*
+#questionnaire {
+    display: none;
+}
+*/
