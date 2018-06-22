@@ -24,33 +24,34 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div id="Rect1">
-                <h1 id="hTag1"> Totally Trivial Trivia!</h1>
-                <hr>
-                <hr>
-                <button id="startbutton">Start</button>
-                <div="thirdpart">
-                    <h2>Well DONE!</h2>
-                    <p> Correct Answer :
-                        <span id="result1"></span>
-                    </p>
-                    <p> InCorrect Answer :
-                        <span id="result2"></span>
-                    </p>
-                    <p> UnAnswered :
-                        <span id="result3"></span>
-                    </p>
-            </div>
-        </div>
 
-        <div class="row">
+        <div id="Rect1">
+            <h1 id="hTag1"> Totally Trivial Trivia!</h1>
+            <hr>
+            <hr>
+            <button id="startbutton">Start</button>
+            <button id="submitbutton">submit</button>
+
+            <div id="thirdpart">
+                <h2>Well DONE!</h2>
+                <p> Correct Answer :
+                    <span id="result1"></span>
+                </p>
+                <p> InCorrect Answer :
+                    <span id="result2"></span>
+                </p>
+                <p> UnAnswered :
+                    <span id="result3"></span>
+                </p>
+            </div>
+
+
             <div id="questionnaire" runat="server" class="mydiv">
-                <h2>Time remaining: inline radio buttons
+                <h2>Time remaining:
                     <span id="timeout">30</span>
                 </h2>
-
-                <form>
+                <br>
+                <form id="form1">
                     <div id="question1">
                         <p>In Aladdin, what is the name of Jasmine's pet tiger?</p>
                         <label class="radio-inline">
@@ -131,7 +132,10 @@
             </div>
         </div>
 
-    </div>
+
+
+
+
 
 
 
