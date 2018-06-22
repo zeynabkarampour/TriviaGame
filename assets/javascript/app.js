@@ -4,11 +4,14 @@ var correctanswer = 0;
 var incorrectanswer = 0;
 var unanswered;
 var userpicked;
+var uncheckedvalue;
 var answer1 = "Rajah";
 var answer2 = "Left Hand";
 var answer3 = "Pride Rock";
 var answer4 = "Dinah";
 var answer5 = "5 Dozen";
+var radioArray = $('.radioBtn')
+var count = 0;
 
 
 
@@ -92,6 +95,23 @@ $(document).ready(function () {
         $("#startbutton").hide();
         $("#submitbutton").hide();
         $("#thirdpart").show();
+
+        radioArray.each((index, val) => {
+            if (val.checked === true) {
+                count++;
+            }
+        })
+        $("#submitbutton").hide();
+        $("#thirdpart").show();
+        var uncheckedvalue = 5 - count;
+        if (uncheckedvalue > 0) {
+            $("#result3").html(uncheckedvalue);
+        }
+
+
+        $("#result1").html(correctanswer);
+        $("#result2").html(incorrectanswer);
+
         clearInterval(intervalId);
 
 
@@ -121,8 +141,8 @@ function decrement() {
     if (number === 0) {
         $("#questionnaire").hide();
         $("#startbutton").hide();
-        var radioArray = $('.radioBtn')
-        var count = 0;
+        // radioArray = $('.radioBtn')
+        // count = 0;
         radioArray.each((index, val) => {
             if (val.checked === true) {
                 count++;
@@ -134,7 +154,7 @@ function decrement() {
         if (uncheckedvalue > 0) {
             $("#result3").html(uncheckedvalue);
         }
-
+        console.log("unchecked radio button number", uncheckedvalue)
         $("#result1").html(correctanswer);
         $("#result2").html(incorrectanswer);
     }
